@@ -13,38 +13,40 @@
 --			values: silence,gapcloser,defensive,potion,nuke,anticc,cc,stun,disarm,cdreset,shield,uncategorized
 --ispetspell -> if its a pet spell true, else false
 
---TODO recklessness value!
+--TODO shield slam r1-5  
 
 Rect.spells = {
 	--Trinkets
-	[42292] = {120, nil, 120, 120, 120, 0, "", "anticc", false}, --PvP Trinket
+	--This (Doesn't work, because there is no combatlog event)
+	[42292] = {120, nil, 120, 120, 120, 0, "", "anticc", false}, --PvP Trinket 
+
+	[44055] = {180, nil, 180, 180, 180, 0, "", "defensive", false}, --Battlemaster Trinket
+
 	--Other Stuff
+	--TODO Rocket boots extreme
 	[54861] = {180, nil, 180, 180, 180, 0, "", "gapcloser", false}, --Rocket Boots (Enchant)
+
 	--Racials (War Stomp no combatlog entry)
-	[59752] = {120, nil, 120, 120, 120, 0, "", "anticc", false}, --Every Man For Himself
+	[20600] = {180, nil, 120, 120, 120, 0, "", "anticc", false}, --Perception
 	[7744] = {120, nil, 120, 120, 120, 0, "", "defensive", false}, --Will of the Forsaken
 	[25046] = {120, nil, 120, 120, 120, 0, "", "silence", false}, --Arcane Torrent (Energy Version)
 	[28730] = {120, nil, 120, 120, 120, 0, "", "silence", false}, --Arcane Torrent (Mana version)
 	[50613] = {120, nil, 120, 120, 120, 0, "", "silence", false}, --Arcane Torrent (Runic Power version)
 	[28730] = {120, nil, 120, 120, 120, 0, "", "silence", false}, --Arcane Torrent (Heroes Warrior)
 	[65116] = {120, nil, 120, 120, 120, 0, "", "defensive", false}, --Stoneform
-	[58984] = {120, nil, 120, 120, 120, 0, "", "defensive", false}, --Shadowmeld
 	[20589] = {105, nil, 105, 105, 105, 0, "", "defensive", false}, --Escape Artist
 	[28880] = {180, nil, 180, 180, 180, 0, "", "defensive", false}, --Gift of the Naaru
 	--Potions
 	[6615] = {60, nil, 60, 60, 60, 0, "", "potion", false}, --Free Action Potion
 	
 	--Warrior
-	--Total: 20
+	--Total: 15
 	--Arms
-	[46924] = {90, nil, 90, 90, 90, 3, "Warrior", "nuke", false}, --BladeStrom
 	[100] = {15, nil, 20, 15, 15, 0, "Warrior", "gapcloser", false}, --Charge rank 1
 	[6178] = {15, nil, 20, 15, 15, 0, "Warrior", "gapcloser", false}, --Charge rank 2
 	[11578] = {15, nil, 20, 15, 15, 0, "Warrior", "gapcloser", false}, --Charge rank 3
-	[57755] = {60, nil, 60, 60, 60, 0, "Warrior", "uncategorized", false}, --Heroic Throw
-	[20230] = {240, nil, 300, 300, 240, 0, "Warrior", "nuke", false}, --Retaliation
-	[64382] = {300, nil, 300, 300, 300, 0, "Warrior", "uncategorized", false}, --Shattering Throw
-	[12328] = {30, nil, 30, 30, 30, 3, "Warrior", "uncategorized", false}, --Sweeping Strikes
+	[20230] = {1800, nil, 1800, 1800, 1800, 0, "Warrior", "nuke", false}, --Retaliation
+	[12292] = {180, nil, 180, 180, 180, 3, "Warrior", "nuke", false}, --Death Wish
 	--Detection
 	[12294] = {0, nil, 0, 0, 0, 3, "Warrior", "", false}, --Mortal Strike r1
 	[21551] = {0, nil, 0, 0, 0, 3, "Warrior", "", false}, --Mortal Strike r2
@@ -52,36 +54,31 @@ Rect.spells = {
 	[21553] = {0, nil, 0, 0, 0, 3, "Warrior", "", false}, --Mortal Strike r4
 	[25248] = {0, nil, 0, 0, 0, 3, "Warrior", "", false}, --Mortal Strike r5
 	[30330] = {0, nil, 0, 0, 0, 3, "Warrior", "", false}, --Mortal Strike r6
-	[47485] = {0, nil, 0, 0, 0, 3, "Warrior", "", false}, --Mortal Strike r7
-	[47486] = {0, nil, 0, 0, 0, 3, "Warrior", "", false}, --Mortal Strike r8
 	--Fury
-	[18499] = {20.1, nil, 30, 20.1, 30, 0, "Warrior", "anticc", false}, --Berserker Rage
-	[12292] = {121, nil, 121, 121, 121, 4, "Warrior", "nuke", false}, --Death Wish
-	[55694] = {180, nil, 180, 180, 180, 0, "Warrior", "defensive", false}, --Enraged Regeneration
-	[60970] = {45, {20252}, 45, 45, 45, 4, "Warrior", "gapcloser", false}, --Heroic Fury
-	[20252] = {20, nil, 30, 20, 30, 0, "Warrior", "gapcloser", false}, --Intercept
-	[5246] = {120, nil, 120, 120, 120, 0, "Warrior", "cc", false}, --Intimidating Shout
+	[18499] = {30, nil, 30, 30, 30, 0, "Warrior", "anticc", false}, --Berserker Rage
+	[20252] = {30, nil, 20, 30, 30, 0, "Warrior", "gapcloser", false}, --Intercept
+	[5246] = {180, nil, 180, 180, 180, 0, "Warrior", "cc", false}, --Intimidating Shout
 	[6552] = {10, nil, 10, 10, 10, 0, "Warrior", "silence", false}, --Pummel
-	[1719] = {161, nil, 300, 210, 240, 0, "Warrior", "nuke", false}, --Recklessness
+	[1719] = {1800, nil, 1800, 1800, 1800, 0, "Warrior", "nuke", false}, --Recklessness
+	[12328] = {30, nil, 30, 30, 30, 4, "Warrior", "uncategorized", false}, --Sweeping Strikes
 	--Detection
 	[23881] = {0, nil, 0, 0, 0, 4, "Warrior", "uncategorized", false}, --Bloodthirst
 	--Protection
-	[12809] = {30, nil, 30, 30, 30, 5, "Warrior", "stun", false}, --Concussion Blow
-	[676] = {40, nil, 60, 60, 60, 0, "Warrior", "disarm", false}, --Disarm
+	[12809] = {45, nil, 45, 45, 45, 5, "Warrior", "stun", false}, --Concussion Blow
+	[676] = {60, nil, 60, 60, 60, 0, "Warrior", "disarm", false}, --Disarm
 	[3411] = {30, nil, 30, 30, 30, 0, "Warrior", "gapcloser", false}, --Intervene
-	[12975] = {180, nil, 180, 180, 180, 0, "Warrior", "defensive", false}, --Last Stand
-	[72] = {12, nil, 12, 12, 12, 0, "Warrior", "silence", false}, --Shield Bash
-	[871] = {240, nil, 300, 300, 240, 0, "Warrior", "defensive", false}, --Shield Wall
-	[46968] = {20, nil, 20, 20, 20, 5, "Warrior", "stun", false}, --Shockwave
+	[12975] = {480, nil, 480, 480, 480, 0, "Warrior", "defensive", false}, --Last Stand
+	[871] = {1800, nil, 1800, 1800, 1800, 0, "Warrior", "defensive", false}, --Shield Wall
 	[23920] = {10, nil, 10, 10, 10, 0, "Warrior", "silence", false}, --Spell Reflection
+	[72] = {12, nil, 12, 12, 12, 0, "Warrior", "silence", false}, --Shield Bash
 	--Detection
 	[20243] = {0, nil, 0, 0, 0, 5, "Warrior", "", false}, --Devastate r1
 	[30016] = {0, nil, 0, 0, 0, 5, "Warrior", "", false}, --Devastate r2
 	[30022] = {0, nil, 0, 0, 0, 5, "Warrior", "", false}, --Devastate r3
-	[47497] = {0, nil, 0, 0, 0, 5, "Warrior", "", false}, --Devastate r4
-	[47498] = {0, nil, 0, 0, 0, 5, "Warrior", "", false}, --Devastate r5
-	[50720] = {0, nil, 0, 0, 0, 5, "Warrior", "", false}, --Vigilance
 	
+	
+	[30022] = {0, nil, 0, 0, 0, 5, "Warrior", "", false}, --Shield Slam r6
+
 	--Paladin
 	--Total: 16
 	--Holy
@@ -249,6 +246,8 @@ Rect.spells = {
 
 	--Priest
 	--Total: 14
+	--Racials
+	[25441] = {180, nil, 180, 180, 180, 0, "Priest", "silence", false}, --Feedback
 	--Discipline
 	[6346] = {180, nil, 180, 180, 180, 0, "Priest", "anticc", false}, --Fear Ward
 	[14751] = {144, nil, 144, 180, 180, 0, "Priest", "uncategorized", false}, --Inner Focus
@@ -310,58 +309,6 @@ Rect.spells = {
 	[34917] = {0, nil, 0, 0, 0, 5, "Priest", "", false}, --Vampiric Touch r3
 	[48159] = {0, nil, 0, 0, 0, 5, "Priest", "", false}, --Vampiric Touch r4
 	[48160] = {0, nil, 0, 0, 0, 5, "Priest", "", false}, --Vampiric Touch r5
-	
-	--Death Knight
-	--Pet
-	[47481] = {60, nil, 60, 60, 60, 0, "DeathKnight", "stun", true}, --Gnaw
-	--Total: 18
-	--Blood
-	[49028] = {90, nil, 90, 90, 90, 3, "DeathKnight", "nuke", false}, --Dancing Rune Weapon
-	[48743] = {120, nil, 120, 120, 120, 0, "DeathKnight", "defensive", false}, --Death Pact
-	[49016] = {180, nil, 180, 180, 180, 3, "DeathKnight", "nuke", false}, --Hysteria
-	[49005] = {180, nil, 180, 180, 180, 3, "DeathKnight", "defensive", false}, --Mark of Blood
-	[48982] = {30, nil, 30, 60, 60, 0, "DeathKnight", "defensive", false}, --Rune Tap
-	[47476] = {120, nil, 120, 120, 120, 0, "DeathKnight", "silence", false}, --Strangulate
-	[55233] = {60, nil, 60, 60, 60, 3, "DeathKnight", "defensive", false}, --Vampiric Blood
-	--Detection
-	[55050] = {0, nil, 0, 0, 0, 3, "DeathKnight", "", false}, --Heart Strike r1
-	[55258] = {0, nil, 0, 0, 0, 3, "DeathKnight", "", false}, --Heart Strike r2
-	[55259] = {0, nil, 0, 0, 0, 3, "DeathKnight", "", false}, --Heart Strike r3
-	[55260] = {0, nil, 0, 0, 0, 3, "DeathKnight", "", false}, --Heart Strike r4
-	[55261] = {0, nil, 0, 0, 0, 3, "DeathKnight", "", false}, --Heart Strike r5
-	[55262] = {0, nil, 0, 0, 0, 3, "DeathKnight", "", false}, --Heart Strike r6
-	--Frost
-	[49796] = {120, nil, 120, 120, 120, 4, "DeathKnight", "defensive", false}, --Unbreakable Armor
-	[47568] = {300, nil, 300, 300, 300, 0, "DeathKnight", "nuke", false}, --Empower Rune Weapon
-	[49203] = {60, nil, 60, 60, 60, 4, "DeathKnight", "cc", false}, --Hungering Cold
-	[48792] = {120, nil, 120, 120, 120, 0, "DeathKnight", "anticc", false}, --Icebound Fortitude
-	[49039] = {120, nil, 120, 120, 120, 0, "DeathKnight", "anticc", false}, --Lichborne
-	[47528] = {10, nil, 10, 10, 10, 0, "DeathKnight", "silence", false}, --Mind Freeze
-	[51271] = {60, nil, 60, 60, 60, 4, "DeathKnight", "defensive", false}, --Unbreakable Armor
-	--Detection
-	[49143] = {0, nil, 0, 0, 0, 4, "DeathKnight", "", false}, --Frost Strike r1
-	[51416] = {0, nil, 0, 0, 0, 4, "DeathKnight", "", false}, --Frost Strike r2
-	[51271] = {0, nil, 0, 0, 0, 4, "DeathKnight", "", false}, --Frost Strike r3
-	[51418] = {0, nil, 0, 0, 0, 4, "DeathKnight", "", false}, --Frost Strike r4
-	[51419] = {0, nil, 0, 0, 0, 4, "DeathKnight", "", false}, --Frost Strike r5
-	[55268] = {0, nil, 0, 0, 0, 4, "DeathKnight", "", false}, --Frost Strike r6
-	[49184] = {0, nil, 0, 0, 0, 4, "DeathKnight", "", false}, --Howling Blast r1
-	[51409] = {0, nil, 0, 0, 0, 4, "DeathKnight", "", false}, --Howling Blast r2
-	[51410] = {0, nil, 0, 0, 0, 4, "DeathKnight", "", false}, --Howling Blast r3
-	[51411] = {0, nil, 0, 0, 0, 4, "DeathKnight", "", false}, --Howling Blast r4
-	--Unholy
-	[48707] = {45, nil, 45, 45, 45, 0, "DeathKnight", "defensive", false}, --Anti-Magic Shell
-	[51052] = {120, nil, 120, 120, 120, 5, "DeathKnight", "defensive", false}, --Anti-Magic Zone
-	[42650] = {360, nil, 600, 600, 360, 0, "DeathKnight", "nuke", false}, --Army of the Dead
-	[49222] = {60, nil, 60, 60, 60, 5, "DeathKnight", "defensive", false}, --Bone Shield
-	[49576] = {25, nil, 35, 35, 25, 0, "DeathKnight", "gapcloser", false}, --Death Grip
-	[49206] = {180, nil, 180, 180, 180, 5, "DeathKnight", "nuke", false}, --Summon Gargoyle
-	--Detection
-	[55090] = {0, nil, 0, 0, 0, 5, "DeathKnight", "", false}, --Scourge Strike r1
-	[55265] = {0, nil, 0, 0, 0, 5, "DeathKnight", "", false}, --Scourge Strike r2
-	[55270] = {0, nil, 0, 0, 0, 5, "DeathKnight", "", false}, --Scourge Strike r3
-	[55271] = {0, nil, 0, 0, 0, 5, "DeathKnight", "", false}, --Scourge Strike r4
-	[63560] = {0, nil, 0, 0, 0, 5, "DeathKnight", "", false}, --Ghoul Frenzy
 	
 	--Shaman
 	--Total: 17
