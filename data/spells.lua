@@ -13,7 +13,8 @@
 --			values: silence,gapcloser,defensive,potion,nuke,anticc,cc,stun,disarm,cdreset,shield,uncategorized
 --ispetspell -> if its a pet spell true, else false
 
---TODO shield slam r1-5  
+--TODO Rocket boots extreme
+--TODO don't forget priest racials
 
 Rect.spells = {
 	--Trinkets
@@ -56,13 +57,26 @@ Rect.spells = {
 	[30330] = {0, nil, 0, 0, 0, 3, "Warrior", "", false}, --Mortal Strike r6
 	--Fury
 	[18499] = {30, nil, 30, 30, 30, 0, "Warrior", "anticc", false}, --Berserker Rage
-	[20252] = {30, nil, 20, 30, 30, 0, "Warrior", "gapcloser", false}, --Intercept
+	[20252] = {30, nil, 20, 30, 30, 0, "Warrior", "gapcloser", false}, --Intercept r1
+	[20616] = {30, nil, 20, 30, 30, 0, "Warrior", "gapcloser", false}, --Intercept r2
+	[20617] = {30, nil, 20, 30, 30, 0, "Warrior", "gapcloser", false}, --Intercept r3
+	[25272] = {30, nil, 20, 30, 30, 0, "Warrior", "gapcloser", false}, --Intercept r4
+	[25275] = {30, nil, 20, 30, 30, 0, "Warrior", "gapcloser", false}, --Intercept r5
 	[5246] = {180, nil, 180, 180, 180, 0, "Warrior", "cc", false}, --Intimidating Shout
-	[6552] = {10, nil, 10, 10, 10, 0, "Warrior", "silence", false}, --Pummel
+	[6552] = {10, nil, 10, 10, 10, 0, "Warrior", "silence", false}, --Pummel r1
+	[6554] = {10, nil, 10, 10, 10, 0, "Warrior", "silence", false}, --Pummel r2
 	[1719] = {1800, nil, 1800, 1800, 1800, 0, "Warrior", "nuke", false}, --Recklessness
 	[12328] = {30, nil, 30, 30, 30, 4, "Warrior", "uncategorized", false}, --Sweeping Strikes
 	--Detection
-	[23881] = {0, nil, 0, 0, 0, 4, "Warrior", "uncategorized", false}, --Bloodthirst
+	[23881] = {0, nil, 0, 0, 0, 4, "Warrior", "uncategorized", false}, --Bloodthirst r1
+	[23892] = {0, nil, 0, 0, 0, 4, "Warrior", "uncategorized", false}, --Bloodthirst r2
+	[23893] = {0, nil, 0, 0, 0, 4, "Warrior", "uncategorized", false}, --Bloodthirst r3
+	[23894] = {0, nil, 0, 0, 0, 4, "Warrior", "uncategorized", false}, --Bloodthirst r4
+	[25251] = {0, nil, 0, 0, 0, 4, "Warrior", "uncategorized", false}, --Bloodthirst r5
+	[30335] = {0, nil, 0, 0, 0, 4, "Warrior", "uncategorized", false}, --Bloodthirst r6
+	[29801] = {0, nil, 0, 0, 0, 4, "Warrior", "uncategorized", false}, --Rampage r1
+	[30030] = {0, nil, 0, 0, 0, 4, "Warrior", "uncategorized", false}, --Rampage r2
+	[30033] = {0, nil, 0, 0, 0, 4, "Warrior", "uncategorized", false}, --Rampage r3
 	--Protection
 	[12809] = {45, nil, 45, 45, 45, 5, "Warrior", "stun", false}, --Concussion Blow
 	[676] = {60, nil, 60, 60, 60, 0, "Warrior", "disarm", false}, --Disarm
@@ -70,73 +84,71 @@ Rect.spells = {
 	[12975] = {480, nil, 480, 480, 480, 0, "Warrior", "defensive", false}, --Last Stand
 	[871] = {1800, nil, 1800, 1800, 1800, 0, "Warrior", "defensive", false}, --Shield Wall
 	[23920] = {10, nil, 10, 10, 10, 0, "Warrior", "silence", false}, --Spell Reflection
-	[72] = {12, nil, 12, 12, 12, 0, "Warrior", "silence", false}, --Shield Bash
+	[72] = {12, nil, 12, 12, 12, 0, "Warrior", "silence", false}, --Shield Bash r1
+	[1671] = {12, nil, 12, 12, 12, 0, "Warrior", "silence", false}, --Shield Bash r2
+	[1672] = {12, nil, 12, 12, 12, 0, "Warrior", "silence", false}, --Shield Bash r3
+	[29704] = {12, nil, 12, 12, 12, 0, "Warrior", "silence", false}, --Shield Bash r4
 	--Detection
 	[20243] = {0, nil, 0, 0, 0, 5, "Warrior", "", false}, --Devastate r1
 	[30016] = {0, nil, 0, 0, 0, 5, "Warrior", "", false}, --Devastate r2
 	[30022] = {0, nil, 0, 0, 0, 5, "Warrior", "", false}, --Devastate r3
-	
-	
-	[30022] = {0, nil, 0, 0, 0, 5, "Warrior", "", false}, --Shield Slam r6
+	[23922] = {0, nil, 0, 0, 0, 5, "Warrior", "", false}, --Shield Slam r1
+	[23923] = {0, nil, 0, 0, 0, 5, "Warrior", "", false}, --Shield Slam r2
+	[23924] = {0, nil, 0, 0, 0, 5, "Warrior", "", false}, --Shield Slam r3
+	[23925] = {0, nil, 0, 0, 0, 5, "Warrior", "", false}, --Shield Slam r4
+	[25258] = {0, nil, 0, 0, 0, 5, "Warrior", "", false}, --Shield Slam r5
+	[30356] = {0, nil, 0, 0, 0, 5, "Warrior", "", false}, --Shield Slam r6
 
 	--Paladin
 	--Total: 16
 	--Holy
-	[31821] = {120, nil, 120, 120, 120, 0, "Paladin", "anticc", false}, --Aura Mastery
 	[20216] = {120, nil, 120, 120, 120, 3, "Paladin", "uncategorized", false}, --Divine Favor
 	[31842] = {180, nil, 180, 180, 180, 3, "Paladin", "uncategorized", false}, --Divine Illumination
-	[54428] = {60, nil, 60, 60, 60, 0, "Paladin", "defensive", false}, --Divine Plea
 	[2812] = {20, nil, 20, 20, 20, 0, "Paladin", "uncategorized", false}, --Holy Wrath r1
 	[10318] = {20, nil, 20, 20, 20, 0, "Paladin", "uncategorized", false}, --Holy Wrath r2
 	[27139] = {20, nil, 20, 20, 20, 0, "Paladin", "uncategorized", false}, --Holy Wrath r3
-	[48816] = {20, nil, 20, 20, 20, 0, "Paladin", "uncategorized", false}, --Holy Wrath r4
-	[48817] = {20, nil, 20, 20, 20, 0, "Paladin", "uncategorized", false}, --Holy Wrath r5
-	[633] = {960, nil, 900, 900, 900, 0, "Paladin", "uncategorized", false}, --Lay on Hands r1
-	[2800] = {960, nil, 900, 900, 900, 0, "Paladin", "uncategorized", false}, --Lay on Hands r2
-	[10310] = {960, nil, 900, 900, 900, 0, "Paladin", "uncategorized", false}, --Lay on Hands r3
-	[27154] = {960, nil, 900, 900, 900, 0, "Paladin", "uncategorized", false}, --Lay on Hands r4
-	[48788] = {960, nil, 900, 900, 900, 0, "Paladin", "uncategorized", false}, --Lay on Hands r5
-	--Detection
-	[20473] = {0, nil, 0, 0, 0, 3, "Paladin", "", false}, --Holy Shock r1
-	[20929] = {0, nil, 0, 0, 0, 3, "Paladin", "", false}, --Holy Shock r2
-	[20930] = {0, nil, 0, 0, 0, 3, "Paladin", "", false}, --Holy Shock r3
-	[27174] = {0, nil, 0, 0, 0, 3, "Paladin", "", false}, --Holy Shock r4
-	[33072] = {0, nil, 0, 0, 0, 3, "Paladin", "", false}, --Holy Shock r5
-	[48824] = {0, nil, 0, 0, 0, 3, "Paladin", "", false}, --Holy Shock r6
-	[48825] = {0, nil, 0, 0, 0, 3, "Paladin", "", false}, --Holy Shock r7
-	[53563] = {0, nil, 0, 0, 0, 3, "Paladin", "", false}, --Beacon of Light
+	[633] = {3600, nil, 3600, 3600, 3600, 0, "Paladin", "uncategorized", false}, --Lay on Hands r1
+	[2800] = {3600, nil, 3600, 3600, 3600, 0, "Paladin", "uncategorized", false}, --Lay on Hands r2
+	[10310] = {3600, nil, 3600, 3600, 3600, 0, "Paladin", "uncategorized", false}, --Lay on Hands r3
+	[27154] = {3600, nil, 3600, 3600, 3600, 0, "Paladin", "uncategorized", false}, --Lay on Hands r4
+	[20473] = {15, nil, 15, 15, 15, 3, "Paladin", "", false}, --Holy Shock r1
+	[20929] = {15, nil, 15, 15, 15, 3, "Paladin", "", false}, --Holy Shock r2
+	[20930] = {15, nil, 15, 15, 15, 3, "Paladin", "", false}, --Holy Shock r3
+	[27174] = {15, nil, 15, 15, 15, 3, "Paladin", "", false}, --Holy Shock r4
+	[33072] = {15, nil, 15, 15, 15, 3, "Paladin", "", false}, --Holy Shock r5
+	[10326] = {30, nil, 30, 30, 30, 0, "Paladin", "", false}, --Turn Evil r1
+	[2878] = {30, nil, 30, 30, 30, 0, "Paladin", "", false}, --Turn Undead r1
+	[5627] = {30, nil, 30, 30, 30, 0, "Paladin", "", false}, --Turn Undead r2
 	--Protection
-	[31935] = {30, nil, 30, 30, 30, 4, "Paladin", "silence", false}, --Avenger's Shield r1
-	[32699] = {30, nil, 30, 30, 30, 4, "Paladin", "silence", false}, --Avenger's Shield r2
-	[32700] = {30, nil, 30, 30, 30, 4, "Paladin", "silence", false}, --Avenger's Shield r3
-	[48826] = {30, nil, 30, 30, 30, 4, "Paladin", "silence", false}, --Avenger's Shield r4
-	[48827] = {30, nil, 30, 30, 30, 4, "Paladin", "silence", false}, --Avenger's Shield r5
-	[498] = {120, nil, 180, 120, 180, 0, "Paladin", "defensive", false}, --Divine Protection
-	[64205] = {120, nil, 120, 120, 120, 0, "Paladin", "defensive", false}, --Divine Sacrifice
-	[642] = {240, nil, 300, 240, 300, 0, "Paladin", "defensive", false}, --Divine Shield
-	[853] = {30, nil, 40, 30, 40, 0, "Paladin", "stun", false}, --Hammer of justice r1
-	[5588] = {30, nil, 40, 30, 40, 0, "Paladin", "stun", false}, --Hammer of justice r2
-	[5589] = {30, nil, 40, 30, 40, 0, "Paladin", "stun", false}, --Hammer of justice r3
-	[10308] = {30, nil, 40, 30, 40, 0, "Paladin", "stun", false}, --Hammer of justice r4
-	[1044] = {25, nil, 25, 25, 25, 0, "Paladin", "anticc", false}, --Hand of Freedom
-	[1022] = {180, nil, 180, 180, 180, 0, "Paladin", "defensive", false}, --Hand of Protection r1
-	[5599] = {180, nil, 180, 180, 180, 0, "Paladin", "defensive", false}, --Hand of Protection r2
-	[10278] = {180, nil, 180, 180, 180, 0, "Paladin", "defensive", false}, --Hand of Protection r3
-	[6940] = {120, nil, 120, 120, 120, 0, "Paladin", "defensive", false}, --Hand of Sacrifice
+	[31935] = {30, nil, 30, 30, 30, 4, "Paladin", "uncategorized", false}, --Avenger's Shield r1
+	[32699] = {30, nil, 30, 30, 30, 4, "Paladin", "uncategorized", false}, --Avenger's Shield r2
+	[32700] = {30, nil, 30, 30, 30, 4, "Paladin", "uncategorized", false}, --Avenger's Shield r3
+	[498] = {300, nil, 300, 300, 300, 0, "Paladin", "defensive", false}, --Divine Protection r1
+	[5573] = {300, nil, 300, 300, 300, 0, "Paladin", "defensive", false}, --Divine Protection r2
+	[642] = {300, nil, 300, 300, 300, 0, "Paladin", "defensive", false}, --Divine Shield r1
+	[1020] = {300, nil, 300, 300, 300, 0, "Paladin", "defensive", false}, --Divine Shield r2
+	[853] = {45, nil, 45, 45, 45, 0, "Paladin", "stun", false}, --Hammer of justice r1
+	[5588] = {45, nil, 45, 45, 45, 0, "Paladin", "stun", false}, --Hammer of justice r2
+	[5589] = {45, nil, 45, 45, 45, 0, "Paladin", "stun", false}, --Hammer of justice r3
+	[10308] = {45, nil, 45, 45, 45, 0, "Paladin", "stun", false}, --Hammer of justice r4
+	[1044] = {25, nil, 25, 25, 25, 0, "Paladin", "anticc", false}, --Blessing of Freedom
+	[1022] = {180, nil, 180, 180, 180, 0, "Paladin", "defensive", false}, --Blessing of Protection r1
+	[5599] = {180, nil, 180, 180, 180, 0, "Paladin", "defensive", false}, --Blessing of Protection r2
+	[10278] = {180, nil, 180, 180, 180, 0, "Paladin", "defensive", false}, --Blessing of Protection r3
+	[6940] = {30, nil, 30, 30, 30, 0, "Paladin", "defensive", false}, --Blessing of Sacrifice r1
+	[20729] = {30, nil, 30, 30, 30, 0, "Paladin", "defensive", false}, --Blessing of Sacrifice r2
+	[27147] = {30, nil, 30, 30, 30, 0, "Paladin", "defensive", false}, --Blessing of Sacrifice r3
+	[27148] = {30, nil, 30, 30, 30, 0, "Paladin", "defensive", false}, --Blessing of Sacrifice r4
 	--Detection
-	[53595] = {0, nil, 0, 0, 0, 4, "Paladin", "", false}, --Hammer of the Righteous
 	[20925] = {0, nil, 0, 0, 0, 4, "Paladin", "", false}, --Holy Shield r1
 	[20927] = {0, nil, 0, 0, 0, 4, "Paladin", "", false}, --Holy Shield r2
 	[20928] = {0, nil, 0, 0, 0, 4, "Paladin", "", false}, --Holy Shield r3
 	[27179] = {0, nil, 0, 0, 0, 4, "Paladin", "", false}, --Holy Shield r4
-	[48951] = {0, nil, 0, 0, 0, 4, "Paladin", "", false}, --Holy Shield r5
-	[48952] = {0, nil, 0, 0, 0, 4, "Paladin", "", false}, --Holy Shield r6
 	--Retribution
-	[31884] = {120, nil, 180, 180, 120, 0, "Paladin", "nuke", false}, --Avenging Wrath
+	[31884] = {180, nil, 180, 180, 180, 0, "Paladin", "nuke", false}, --Avenging Wrath
 	[20066] = {60, nil, 60, 60, 60, 5, "Paladin", "cc", false}, --Repentance
 	--Detection
 	[35395] = {0, nil, 0, 0, 0, 5, "Paladin", "", false}, --Crusader Strike
-	[53385] = {0, nil, 0, 0, 0, 5, "Paladin", "", false}, --Crusader Strike
 	
 	--Hunter
 	--Total: 15
