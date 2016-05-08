@@ -15,7 +15,7 @@
 --			values: silence,gapcloser,defensive,potion,nuke,anticc,cc,stun,disarm,cdreset,shield,uncategorized
 --ispetspell -> if its a pet spell true, else false
 
-Rect.spells = {
+Rekt.spells = {
 	--Trinkets
 	--This (Doesn't work, because there is no combatlog event)
 	[42292] = {120, nil, 120, 120, 120, 0, "", "anticc", false}, --PvP Trinket 
