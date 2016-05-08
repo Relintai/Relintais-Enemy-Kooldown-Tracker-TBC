@@ -15,19 +15,16 @@
 --			values: silence,gapcloser,defensive,potion,nuke,anticc,cc,stun,disarm,cdreset,shield,uncategorized
 --ispetspell -> if its a pet spell true, else false
 
---TODO Rocket boots extreme
---TODO don't forget priest racials
-
 Rect.spells = {
 	--Trinkets
 	--This (Doesn't work, because there is no combatlog event)
 	[42292] = {120, nil, 120, 120, 120, 0, "", "anticc", false}, --PvP Trinket 
-
 	[44055] = {180, nil, 180, 180, 180, 0, "", "defensive", false}, --Battlemaster Trinket
 
 	--Other Stuff
-	--TODO Rocket boots extreme
-	[54861] = {180, nil, 180, 180, 180, 0, "", "gapcloser", false}, --Rocket Boots (Enchant)
+	[51582] = {300, nil, 300, 300, 300, 0, "", "gapcloser", false}, --Rocket Boots Extreme + Lite
+	[30456] = {300, nil, 300, 300, 300, 0, "", "shield", false}, --Nigh Invulnerability Belt
+	[30501] = {300, nil, 300, 300, 300, 0, "", "cc", false}, --Gnomish Poultryizer
 
 	--Racials (War Stomp no combatlog entry)
 	[20600] = {180, nil, 120, 120, 120, 0, "", "anticc", false}, --Perception
@@ -43,7 +40,6 @@ Rect.spells = {
 	[6615] = {60, nil, 60, 60, 60, 0, "", "potion", false}, --Free Action Potion
 	
 	--Warrior
-	--Total: 15
 	--Arms
 	[100] = {15, nil, 20, 15, 15, 0, "Warrior", "gapcloser", false}, --Charge rank 1
 	[6178] = {15, nil, 20, 15, 15, 0, "Warrior", "gapcloser", false}, --Charge rank 2
@@ -102,7 +98,6 @@ Rect.spells = {
 	[30356] = {0, nil, 0, 0, 0, 5, "Warrior", "uncategorized", false}, --Shield Slam r6
 
 	--Paladin
-	--Total: 16
 	--Holy
 	[20216] = {120, nil, 120, 120, 120, 3, "Paladin", "uncategorized", false}, --Divine Favor
 	[31842] = {180, nil, 180, 180, 180, 3, "Paladin", "uncategorized", false}, --Divine Illumination
@@ -153,50 +148,46 @@ Rect.spells = {
 	[35395] = {0, nil, 0, 0, 0, 5, "Paladin", "", false}, --Crusader Strike
 	
 	--Hunter
-	--Total: 15
 	--Feign Death No Combat log entry
-	--Pet
-	[53480] = {42, nil, 42, 42, 42, 0, "Hunter", "defensive", true}, --Roar of Sacrifice
-	[53476] = {21, nil, 21, 21, 21, 0, "Hunter", "defensive", true}, --Intervene
-	[53562] = {28, nil, 28, 28, 28, 0, "Hunter", "stun", true}, --Ravage (ravager)
-	[53548] = {28, nil, 28, 28, 28, 0, "Hunter", "cc", true}, --Pin (Crab)
-	[53543] = {42, nil, 42, 42, 42, 0, "Hunter", "disarm", true}, --Snatch (Bird of Prey)
-	[4167] = {28, nil, 28, 28, 28, 0, "Hunter", "cc", true}, --Web (Spider)
-	[53434] = {210, nil, 210, 210, 210, 0, "Hunter", "nuke", true}, --Call of the Wild (Ferocity pet talent)
 	--Beast Mastery
 	[19574] = {84, nil, 84, 84, 84, 3, "Hunter", "nuke", false}, --Bestial Wrath
 	[19577] = {42, nil, 42, 42, 42, 3, "Hunter", "stun", false}, --Intimidation
-	[53271] = {60, nil, 60, 60, 60, 0, "Hunter", "anticc", false}, --Master's Call
 	[14327] = {30, nil, 30, 30, 30, 0, "Hunter", "cc", false}, --Scare Beast
 	--Marksman
 	[1543] = {20, nil, 20, 20, 20, 0, "Hunter", "uncategorized", false}, --Flare
-	[3045] = {180, nil, 300, 300, 300, 0, "Hunter", "nuke", false}, --Rapid Fire
-	[23989] = {180, 
-		{19577,53271,14327, 1543,3045,34490,3674,63668,63669,
-		63670,63671,63672,19263,781,13813,14316,14317,
-		27025,49066,49067,60192,1499,14310,14311,13809,
-		13795,14302,14303,14304,14305,27023,49055,49056,
-		19503,34600,19386,24132,24133,27068,49011,49012}, 180, 180, 180, 4, "Hunter", "cdreset", false}, --Readiness
+	[3045] = {180, nil, 300, 180, 300, 0, "Hunter", "nuke", false}, --Rapid Fire
+	[19503] = {30, nil, 30, 30, 30, 4, "Hunter", "cc", false}, --Scatter Shot
 	[34490] = {20, nil, 20, 20, 20, 4, "Hunter", "silence", false}, --Silencing Shot
+	[19801] = {20, nil, 20, 20, 20, 0, "Hunter", "uncategorized", false}, --Tranquilizing Shot
 	--Detection
-	[53209] = {0, nil, 0, 0, 0, 4, "Hunter", "", false}, --Chimera Shot
-	--Survival
-	[3674] = {24, nil, 24, 24, 24, 5, "Hunter", "uncategorized", false}, --Black Arrow r1
-	[63668] = {24, nil, 24, 24, 24, 5, "Hunter", "uncategorized", false}, --Black Arrow r2
-	[63669] = {24, nil, 24, 24, 24, 5, "Hunter", "uncategorized", false}, --Black Arrow r3
-	[63670] = {24, nil, 24, 24, 24, 5, "Hunter", "uncategorized", false}, --Black Arrow r4
-	[63671] = {24, nil, 24, 24, 24, 5, "Hunter", "uncategorized", false}, --Black Arrow r5
-	[63672] = {24, nil, 24, 24, 24, 5, "Hunter", "uncategorized", false}, --Black Arrow r6
-	[19263] = {90, nil, 90, 90, 90, 0, "Hunter", "defensive", false}, --Deterrence
-	[781] = {16, nil, 20, 16, 16, 0, "Hunter", "gapcloser", false}, --Disengage
+	[19506] = {0, nil, 0, 0, 0, 4, "Hunter", "uncategorized", false}, --Trueshot Aura
+	--Survival (trap cds default to 30, as survival hunters are rare in TBC)
+	--Readiness -> it will have all the cooldowns, there might be servers with more talents given
+	[23989] = {180, 
+		{
+			19574, --Betial Wrath
+			19577, --Intimidation
+			14327, --Scare Beast
+			1543, --Flare
+			3045, --Rapid Fire
+			19503, --Scatter Shot
+			34490, --Silencing Shot
+			19801, --Tranquilizing Shot
+			19263, --Deterrence
+			13813, 14316, 14317, 27025, --Explosive Trap
+			1499, 14310, 14311, --Freezing Trap
+			13809, --Frost Trap
+			13795, 14302, 14303, 14304, 14305, 27023, --Immolation Trap
+			34600, --Snake Trap
+			19386, 24132, 24133, 27068 --Wyvern Sting
+		}, 180, 180, 180, 5, "Hunter", "cdreset", false}, --Readiness
+
+	[19263] = {300, nil, 300, 300, 300, 0, "Hunter", "defensive", false}, --Deterrence
 	[13813] = {24, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false}, --Explosive Trap r1
 	[14316] = {24, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false}, --Explosive Trap r2
 	[14317] = {24, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false}, --Explosive Trap r3
 	[27025] = {24, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false}, --Explosive Trap r4
-	[49066] = {24, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false}, --Explosive Trap r5
-	[49067] = {24, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false}, --Explosive Trap r6
 	--Feign Death
-	[60192] = {24, nil, 30, 30, 24, 0, "Hunter", "cc", false}, --Freezing Arrow
 	[1499] = {24, nil, 30, 30, 24, 0, "Hunter", "cc", false}, --Freezing Trap r1
 	[14310] = {24, nil, 30, 30, 24, 0, "Hunter", "cc", false}, --Freezing Trap r2
 	[14311] = {24, nil, 30, 30, 24, 0, "Hunter", "cc", false}, --Freezing Trap r3
@@ -207,66 +198,80 @@ Rect.spells = {
 	[14304] = {24, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false}, --Immolation Trap r4
 	[14305] = {24, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false}, --Immolation Trap r5
 	[27023] = {24, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false}, --Immolation Trap r6
-	[49055] = {24, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false}, --Immolation Trap r7
-	[49056] = {24, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false}, --Immolation Trap r8
-	[19503] = {30, nil, 30, 30, 30, 0, "Hunter", "cc", false}, --Scatter Shot
 	[34600] = {24, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false}, --Snake Trap
 	[19386] = {60, nil, 60, 60, 60, 5, "Hunter", "cc", false}, --Wyvern Sting r1
 	[24132] = {60, nil, 60, 60, 60, 5, "Hunter", "cc", false}, --Wyvern Sting r2
 	[24133] = {60, nil, 60, 60, 60, 5, "Hunter", "cc", false}, --Wyvern Sting r3
 	[27068] = {60, nil, 60, 60, 60, 5, "Hunter", "cc", false}, --Wyvern Sting r4
-	[49011] = {60, nil, 60, 60, 60, 5, "Hunter", "cc", false}, --Wyvern Sting r5
-	[49012] = {60, nil, 60, 60, 60, 5, "Hunter", "cc", false}, --Wyvern Sting r6
 	--Detection
-	[53301] = {0, nil, 0, 0, 0, 5, "Hunter", "uncategorized", false}, --Explosive Shot r1
-	[60051] = {0, nil, 0, 0, 0, 5, "Hunter", "uncategorized", false}, --Explosive Shot r2
-	[60052] = {0, nil, 0, 0, 0, 5, "Hunter", "uncategorized", false}, --Explosive Shot r3
-	[60053] = {0, nil, 0, 0, 0, 5, "Hunter", "uncategorized", false}, --Explosive Shot r4
+	[19306] = {0, nil, 0, 0, 0, 5, "Hunter", "uncategorized", false}, --Counterattack r1
+	[20909] = {0, nil, 0, 0, 0, 5, "Hunter", "uncategorized", false}, --Counterattack r2
+	[20910] = {0, nil, 0, 0, 0, 5, "Hunter", "uncategorized", false}, --Counterattack r3
+	[27067] = {0, nil, 0, 0, 0, 5, "Hunter", "uncategorized", false}, --Counterattack r4
 	
 	--Rogue
-	--Total: 15
 	--Assassination
 	[14177] = {180, nil, 180, 180, 180, 3, "Rogue", "nuke", false}, --Cold Blood
-	[51722] = {60, nil, 60, 60, 60, 0, "Rogue", "disarm", false}, --Dismantle
 	[408] = {20, nil, 20, 20, 20, 0, "Rogue", "stun", false}, --Kidney Shot r1
 	[8643] = {20, nil, 20, 20, 20, 0, "Rogue", "stun", false}, --Kidney Shot r2
 	--detect
-	[51662] = {0, nil, 0, 0, 0, 3, "Rogue", "uncategorized", false}, --Hunger for Blood
 	[1329] = {0, nil, 0, 0, 0, 3, "Rogue", "uncategorized", false}, --Mutilate r1
 	[34411] = {0, nil, 0, 0, 0, 3, "Rogue", "uncategorized", false}, --Mutilate r2
 	[34412] = {0, nil, 0, 0, 0, 3, "Rogue", "uncategorized", false}, --Mutilate r3
 	[34413] = {0, nil, 0, 0, 0, 3, "Rogue", "uncategorized", false}, --Mutilate r4
-	[48663] = {0, nil, 0, 0, 0, 3, "Rogue", "uncategorized", false}, --Mutilate r5
-	[48666] = {0, nil, 0, 0, 0, 3, "Rogue", "uncategorized", false}, --Mutilate r6
 	--Combat
-	[13750] = {180, nil, 180, 180, 180, 4, "Rogue", "nuke", false}, --Adrenaline Rush
+	[13750] = {300, nil, 300, 300, 300, 4, "Rogue", "nuke", false}, --Adrenaline Rush
 	[13877] = {120, nil, 120, 120, 120, 4, "Rogue", "nuke", false}, --Blade Flurry
-	[5277] = {120, nil, 180, 120, 180, 0, "Rogue", "defensive", false}, --Evasion r1
-	[26669] = {120, nil, 180, 120, 180, 0, "Rogue", "defensive", false}, --Evasion r2
+	[5277] = {210, nil, 300, 210, 300, 0, "Rogue", "defensive", false}, --Evasion r1
+	[26669] = {210, nil, 300, 210, 300, 0, "Rogue", "defensive", false}, --Evasion r2
 	[1766] = {10, nil, 10, 10, 10, 0, "Rogue", "silence", false}, --Kick
-	[51690] = {120, nil, 120, 120, 120, 4, "Rogue", "nuke", false}, --Killing Spree
-	[2983] = {120, nil, 180, 120, 180, 0, "Rogue", "defensive", false}, --Sprint r1
-	[8696] = {120, nil, 180, 120, 180, 0, "Rogue", "defensive", false}, --Sprint r2
-	[11305] = {120, nil, 180, 120, 180, 0, "Rogue", "defensive", false}, --Sprint r3
+	[2983] = {210, nil, 300, 210, 300, 0, "Rogue", "defensive", false}, --Sprint r1
+	[8696] = {210, nil, 300, 210, 300, 0, "Rogue", "defensive", false}, --Sprint r2
+	[11305] = {210, nil, 300, 210, 300, 0, "Rogue", "defensive", false}, --Sprint r3
 	--Subtlety
-	[2094] = {120, nil, 120, 120, 120, 0, "Rogue", "cc", false}, --Blind
+	[2094] = {90, nil, 180, 180, 90, 0, "Rogue", "cc", false}, --Blind
 	[31224] = {60, nil, 60, 60, 60, 0, "Rogue", "defensive", false}, --Cloak of Shadows
-	[14185] = {300, {5277, 26669, 2983, 8696, 11305, 1856, 1857, 26889, 14177, 36554}, 480, 480, 300, 0, "Rogue", "cdreset", false}, --Preparation
-	[51713] = {60, nil, 60, 60, 60, 5, "Rogue", "nuke", false}, --Shadow Dance
+	[14185] = {600, 
+		{
+			5277, 26669, --Evasion
+			2983, 8696, 11305, --Sprint
+			1856, 1857, 26889, --Vanish
+			14177, --Cold Blood
+			36554 --Shadowstep
+		}, 600, 600, 600, 0, "Rogue", "cdreset", false}, --Preparation
+
 	[36554] = {20, nil, 30, 30, 20, 5, "Rogue", "gapcloser", false}, --Shadowstep
-	[1856] = {120, nil, 120, 120, 120, 0, "Rogue", "defensive", false}, --Vanish r1
-	[1857] = {120, nil, 120, 120, 120, 0, "Rogue", "defensive", false}, --Vanish r2
-	[26889] = {120, nil, 120, 120, 120, 0, "Rogue", "defensive", false}, --Vanish r3
+	[1856] = {210, nil, 300, 300, 210, 0, "Rogue", "defensive", false}, --Vanish r1
+	[1857] = {210, nil, 300, 300, 210, 0, "Rogue", "defensive", false}, --Vanish r2
+	[26889] = {210, nil, 300, 300, 210, 0, "Rogue", "defensive", false}, --Vanish r3
+	[45182] = {60, nil, 60, 60, 60, 5, "Rogue", "defensive", false}, --Cheating Death (all ranks cast this)
 
 	--Priest
-	--Total: 14
 	--Racials
+	--Human
 	[25441] = {180, nil, 180, 180, 180, 0, "Priest", "silence", false}, --Feedback
+	--Dwarf, Human
+	[19203] = {120, nil, 120, 120, 120, 0, "Priest", "defensive", false}, --Desperate Prayer r1
+	[19238] = {120, nil, 120, 120, 120, 0, "Priest", "defensive", false}, --Desperate Prayer r2
+	[19240] = {120, nil, 120, 120, 120, 0, "Priest", "defensive", false}, --Desperate Prayer r3
+	[19241] = {120, nil, 120, 120, 120, 0, "Priest", "defensive", false}, --Desperate Prayer r4
+	[19242] = {120, nil, 120, 120, 120, 0, "Priest", "defensive", false}, --Desperate Prayer r5
+	[19243] = {120, nil, 120, 120, 120, 0, "Priest", "defensive", false}, --Desperate Prayer r6
+	[25437] = {120, nil, 120, 120, 120, 0, "Priest", "defensive", false}, --Desperate Prayer r7
+	[48172] = {120, nil, 120, 120, 120, 0, "Priest", "defensive", false}, --Desperate Prayer r8
+	--Undead
+	[2944] = {180, nil, 180, 180, 180, 0, "Priest", "nuke", false}, --Devouring Plague r1
+	[19276] = {180, nil, 180, 180, 180, 0, "Priest", "nuke", false}, --Devouring Plague r2
+	[19277] = {180, nil, 180, 180, 180, 0, "Priest", "nuke", false}, --Devouring Plague r3
+	[19278] = {180, nil, 180, 180, 180, 0, "Priest", "nuke", false}, --Devouring Plague r4
+	[19279] = {180, nil, 180, 180, 180, 0, "Priest", "nuke", false}, --Devouring Plague r5
+	[19280] = {180, nil, 180, 180, 180, 0, "Priest", "nuke", false}, --Devouring Plague r6
+	[25467] = {180, nil, 180, 180, 180, 0, "Priest", "nuke", false}, --Devouring Plague r7
 	--Discipline
 	[6346] = {180, nil, 180, 180, 180, 0, "Priest", "anticc", false}, --Fear Ward
-	[14751] = {144, nil, 144, 180, 180, 0, "Priest", "uncategorized", false}, --Inner Focus
-	[33206] = {144, nil, 144, 144, 144, 3, "Priest", "defensive", false}, --Pain Supression
-	[10060] = {96, nil, 96, 96, 96, 3, "Priest", "uncategorized", false}, --Power infusion
+	[14751] = {180, nil, 180, 180, 180, 0, "Priest", "uncategorized", false}, --Inner Focus
+	[33206] = {120, nil, 120, 120, 120, 3, "Priest", "defensive", false}, --Pain Supression
+	[10060] = {180, nil, 180, 180, 180, 3, "Priest", "uncategorized", false}, --Power infusion
 	[17] = {15, nil, 15, 15, 15, 0, "Priest", "shield", false}, --Power Word: Shield r1
 	[592] = {15, nil, 15, 15, 15, 0, "Priest", "shield", false}, --Power Word: Shield r2
 	[600] = {15, nil, 15, 15, 15, 0, "Priest", "shield", false}, --Power Word: Shield r3
@@ -279,127 +284,89 @@ Rect.spells = {
 	[10901] = {15, nil, 15, 15, 15, 0, "Priest", "shield", false}, --Power Word: Shield r10
 	[25217] = {15, nil, 15, 15, 15, 0, "Priest", "shield", false}, --Power Word: Shield r11
 	[25218] = {15, nil, 15, 15, 15, 0, "Priest", "shield", false}, --Power Word: Shield r12
-	[48065] = {15, nil, 15, 15, 15, 0, "Priest", "shield", false}, --Power Word: Shield r13
-	[48066] = {15, nil, 15, 15, 15, 0, "Priest", "shield", false}, --Power Word: Shield r14
-	--Detection
-	--Penance no combatlog event
 	--Holy
-	[19203] = {120, nil, 120, 120, 120, 0, "Priest", "defensive", false}, --Desperate Prayer r1
-	[19238] = {120, nil, 120, 120, 120, 0, "Priest", "defensive", false}, --Desperate Prayer r2
-	[19240] = {120, nil, 120, 120, 120, 0, "Priest", "defensive", false}, --Desperate Prayer r3
-	[19241] = {120, nil, 120, 120, 120, 0, "Priest", "defensive", false}, --Desperate Prayer r4
-	[19242] = {120, nil, 120, 120, 120, 0, "Priest", "defensive", false}, --Desperate Prayer r5
-	[19243] = {120, nil, 120, 120, 120, 0, "Priest", "defensive", false}, --Desperate Prayer r6
-	[25437] = {120, nil, 120, 120, 120, 0, "Priest", "defensive", false}, --Desperate Prayer r7
-	[48172] = {120, nil, 120, 120, 120, 0, "Priest", "defensive", false}, --Desperate Prayer r8
-	[48173] = {120, nil, 120, 120, 120, 0, "Priest", "defensive", false}, --Desperate Prayer r9
-	[64843] = {480, nil, 480, 480, 480, 0, "Priest", "defensive", false}, --Divine Hymn
-	[47788] = {180, nil, 180, 180, 180, 4, "Priest", "defensive", false}, --Guardian Spirit
-	[64901] = {360, nil, 360, 360, 360, 0, "Priest", "defensive", false}, --Hymn of Hope
 	--Detection
-	--Lightwell no combatlog entry
+	--Lightwell it uses a different event, I think it's unnecessary to implement
 	[34861] = {0, nil, 0, 0, 0, 4, "Priest", "uncategorized", false}, --Circle of Healing r1
 	[34863] = {0, nil, 0, 0, 0, 4, "Priest", "uncategorized", false}, --Circle of Healing r2
 	[34864] = {0, nil, 0, 0, 0, 4, "Priest", "uncategorized", false}, --Circle of Healing r3
 	[34865] = {0, nil, 0, 0, 0, 4, "Priest", "uncategorized", false}, --Circle of Healing r4
 	[34866] = {0, nil, 0, 0, 0, 4, "Priest", "uncategorized", false}, --Circle of Healing r5
-	[48088] = {0, nil, 0, 0, 0, 4, "Priest", "uncategorized", false}, --Circle of Healing r6
-	[48089] = {0, nil, 0, 0, 0, 4, "Priest", "uncategorized", false}, --Circle of Healing r7
 	--Shadow
-	[47585] = {75, nil, 75, 75, 75, 5, "Priest", "defensive", false}, --Dispersion
-	[586] = {24, nil, 30, 30, 24, 0, "Priest", "uncategorized", false}, --Fade
-	[64044] = {120, nil, 120, 120, 120, 5, "Priest", "cc", false}, --Psychic Horror
-	[8122] = {26, nil, 30, 30, 24, 0, "Priest", "cc", false}, --Psychic Scream r1
-	[8124] = {26, nil, 30, 30, 24, 0, "Priest", "cc", false}, --Psychic Scream r2
-	[10888] = {26, nil, 30, 30, 24, 0, "Priest", "cc", false}, --Psychic Scream r3
-	[10890] = {26, nil, 30, 30, 24, 0, "Priest", "cc", false}, --Psychic Scream r4
-	[34433] = {180, nil, 180, 180, 180, 0, "Priest", "nuke", false}, --Shadowfiend
+	--I think fade is unnecessary even in pve
+	[8122] = {26, nil, 30, 30, 26, 0, "Priest", "cc", false}, --Psychic Scream r1
+	[8124] = {26, nil, 30, 30, 26, 0, "Priest", "cc", false}, --Psychic Scream r2
+	[10888] = {26, nil, 30, 30, 26, 0, "Priest", "cc", false}, --Psychic Scream r3
+	[10890] = {26, nil, 30, 30, 26, 0, "Priest", "cc", false}, --Psychic Scream r4
+	[34433] = {300, nil, 300, 300, 300, 0, "Priest", "nuke", false}, --Shadowfiend
 	[15487] = {45, nil, 45, 45, 45, 5, "Priest", "silence", false}, --Silence
+	[32379] = {12, nil, 12, 12, 12, 0, "Priest", "nuke", false}, --Shadow Word: Death r1
+	[32996] = {12, nil, 12, 12, 12, 0, "Priest", "nuke", false}, --Shadow Word: Death r2
 	--Detection
 	[15473] = {0, nil, 0, 0, 0, 5, "Priest", "uncategorized", false}, --Shadowform
 	[15286] = {0, nil, 0, 0, 0, 5, "Priest", "uncategorized", false}, --Vampiric Embrace
 	[34914] = {0, nil, 0, 0, 0, 5, "Priest", "uncategorized", false}, --Vampiric Touch r1
 	[34916] = {0, nil, 0, 0, 0, 5, "Priest", "uncategorized", false}, --Vampiric Touch r2
 	[34917] = {0, nil, 0, 0, 0, 5, "Priest", "uncategorized", false}, --Vampiric Touch r3
-	[48159] = {0, nil, 0, 0, 0, 5, "Priest", "uncategorized", false}, --Vampiric Touch r4
-	[48160] = {0, nil, 0, 0, 0, 5, "Priest", "uncategorized", false}, --Vampiric Touch r5
 	
 	--Shaman
-	--Total: 17
 	--Elemental
-	[2484] = {10.5, nil, 10.5, 10.5, 10.5, 0, "Shaman", "uncategorized", false}, --Earthbind Totem
+	[8042] = {5, nil, 5, 5, 6, 0, "Shaman", "silence", false}, --Earth Shock r1
+	[8044] = {5, nil, 5, 5, 6, 0, "Shaman", "silence", false}, --Earth Shock r2
+	[8045] = {5, nil, 5, 5, 6, 0, "Shaman", "silence", false}, --Earth Shock r3
+	[8046] = {5, nil, 5, 5, 6, 0, "Shaman", "silence", false}, --Earth Shock r4
+	[10412] = {5, nil, 5, 5, 6, 0, "Shaman", "silence", false}, --Earth Shock r5
+	[10413] = {5, nil, 5, 5, 6, 0, "Shaman", "silence", false}, --Earth Shock r6
+	[10414] = {5, nil, 5, 5, 6, 0, "Shaman", "silence", false}, --Earth Shock r7
+	[25454] = {5, nil, 5, 5, 6, 0, "Shaman", "silence", false}, --Earth Shock r8
+	[8050] = {5, nil, 5, 5, 6, 0, "Shaman", "silence", false}, --Flame Shock r1
+	[8052] = {5, nil, 5, 5, 6, 0, "Shaman", "silence", false}, --Flame Shock r2
+	[8053] = {5, nil, 5, 5, 6, 0, "Shaman", "silence", false}, --Flame Shock r3
+	[10447] = {5, nil, 5, 5, 6, 0, "Shaman", "silence", false}, --Flame Shock r4
+	[10448] = {5, nil, 5, 5, 6, 0, "Shaman", "silence", false}, --Flame Shock r5
+	[29228] = {5, nil, 5, 5, 6, 0, "Shaman", "silence", false}, --Flame Shock r6
+	[25457] = {5, nil, 5, 5, 6, 0, "Shaman", "silence", false}, --Flame Shock r7
+	[8056] = {5, nil, 5, 5, 6, 0, "Shaman", "silence", false}, --Frost Shock r1
+	[8058] = {5, nil, 5, 5, 6, 0, "Shaman", "silence", false}, --Frost Shock r2
+	[10472] = {5, nil, 5, 5, 6, 0, "Shaman", "silence", false}, --Frost Shock r3
+	[10473] = {5, nil, 5, 5, 6, 0, "Shaman", "silence", false}, --Frost Shock r4
+	[25464] = {5, nil, 5, 5, 6, 0, "Shaman", "silence", false}, --Frost Shock r5
+	[2484] = {15, nil, 15, 15, 15, 0, "Shaman", "uncategorized", false}, --Earthbind Totem
 	[16166] = {180, nil, 180, 180, 180, 3, "Shaman", "nuke", false}, --Elemental Mastery
-	[2894] = {600, nil, 600, 600, 600, 0, "Shaman", "nuke", false}, --Fire Elemental Totem
-	[51514] = {45, nil, 45, 45, 45, 0, "Shaman", "cc", false}, --Hex
-	[5730] = {21, nil, 21, 21, 21, 0, "Shaman", "shield", false}, --Stoneclaw Totem r1
-	[6390] = {21, nil, 21, 21, 21, 0, "Shaman", "shield", false}, --Stoneclaw Totem r2
-	[6391] = {21, nil, 21, 21, 21, 0, "Shaman", "shield", false}, --Stoneclaw Totem r3
-	[6392] = {21, nil, 21, 21, 21, 0, "Shaman", "shield", false}, --Stoneclaw Totem r4
-	[10427] = {21, nil, 21, 21, 21, 0, "Shaman", "shield", false}, --Stoneclaw Totem r5
-	[10428] = {21, nil, 21, 21, 21, 0, "Shaman", "shield", false}, --Stoneclaw Totem r6
-	[25525] = {21, nil, 21, 21, 21, 0, "Shaman", "shield", false}, --Stoneclaw Totem r7
-	[58580] = {21, nil, 21, 21, 21, 0, "Shaman", "shield", false}, --Stoneclaw Totem r8
-	[58581] = {21, nil, 21, 21, 21, 0, "Shaman", "shield", false}, --Stoneclaw Totem r9
-	[58582] = {21, nil, 21, 21, 21, 0, "Shaman", "shield", false}, --Stoneclaw Totem r10
-	[51490] = {45, nil, 45, 45, 45, 3, "Shaman", "gapcloser", false}, --Thunderstorm r1
-	[59156] = {45, nil, 45, 45, 45, 3, "Shaman", "gapcloser", false}, --Thunderstorm r1
-	[59158] = {45, nil, 45, 45, 45, 3, "Shaman", "gapcloser", false}, --Thunderstorm r1
-	[59159] = {45, nil, 45, 45, 45, 3, "Shaman", "gapcloser", false}, --Thunderstorm r1
-	[57994] = {5, nil, 5, 5, 6, 0, "Shaman", "silence", false}, --Wind Shear
+	[2894] = {1200, nil, 1200, 1200, 1200, 0, "Shaman", "nuke", false}, --Fire Elemental Totem
 	--Detection:
-	[30706] = {0, nil, 0, 0, 0, 3, "Shaman", "uncategorized", false}, --Totem of Wrath r1
-	[57720] = {0, nil, 0, 0, 0, 3, "Shaman", "uncategorized", false}, --Totem of Wrath r2
-	[57721] = {0, nil, 0, 0, 0, 3, "Shaman", "uncategorized", false}, --Totem of Wrath r3
-	[57722] = {0, nil, 0, 0, 0, 3, "Shaman", "uncategorized", false}, --Totem of Wrath r4
+	[30706] = {0, nil, 0, 0, 0, 3, "Shaman", "uncategorized", false}, --Totem of Wrath
 	--Enhancement
-	[2825] = {300, nil, 300, 300, 300, 0, "Shaman", "nuke", false}, --Bloodlust
-	[32182] = {300, nil, 300, 300, 300, 0, "Shaman", "nuke", false}, --Heroism
-	[2062] = {600, nil, 600, 600, 600, 0, "Shaman", "nuke", false}, --Earth Elemental Totem
-	[51533] = {180, nil, 180, 180, 180, 4, "Shaman", "nuke", false}, --Feral Spirit
-	[58875] = {32, nil, 180, 180, 180, 4, "Shaman", "gapcloser", true}, --Spirit Walk
-	[8177] = {13, nil, 15, 15, 15, 0, "Shaman", "silence", false}, --Grounding Totem
-	[30823] = {60, nil, 60, 60, 60, 4, "Shaman", "defensive", false}, --Shamanistic Rage
+	[2825] = {600, nil, 600, 600, 600, 0, "Shaman", "nuke", false}, --Bloodlust
+	[32182] = {600, nil, 600, 600, 600, 0, "Shaman", "nuke", false}, --Heroism
+	[2062] = {1200, nil, 1200, 1200, 1200, 0, "Shaman", "nuke", false}, --Earth Elemental Totem
+	[8177] = {13, nil, 15, 15, 13, 0, "Shaman", "silence", false}, --Grounding Totem
+	[30823] = {120, nil, 120, 120, 120, 4, "Shaman", "defensive", false}, --Shamanistic Rage
 	--Detection
 	[17364] = {0, nil, 0, 0, 0, 4, "Shaman", "uncategorized", false}, --Stormstrike
-	[60103] = {0, nil, 0, 0, 0, 4, "Shaman", "uncategorized", false}, --Lava Lash
 	--Restoration
 	[16190] = {300, nil, 300, 300, 300, 0, "Shaman", "uncategorized", false}, --Mana Tide Totem
-	[16188] = {120, nil, 300, 300, 300, 0, "Shaman", "defensive", false}, --Nature's Swiftness
-	[55198] = {180, nil, 180, 180, 180, 0, "Shaman", "defensive", false}, --Tidal Force
+	[16188] = {300, nil, 300, 300, 300, 0, "Shaman", "defensive", false}, --Nature's Swiftness
 	--Detection
 	[974] = {0, nil, 0, 0, 0, 5, "Shaman", "uncategorized", false}, --Earth Shield r1
 	[32593] = {0, nil, 0, 0, 0, 5, "Shaman", "uncategorized", false}, --Earth Shield r2
 	[32594] = {0, nil, 0, 0, 0, 5, "Shaman", "uncategorized", false}, --Earth Shield r3
-	[49283] = {0, nil, 0, 0, 0, 5, "Shaman", "uncategorized", false}, --Earth Shield r4
-	[49284] = {0, nil, 0, 0, 0, 5, "Shaman", "uncategorized", false}, --Earth Shield r5
-	[61295] = {0, nil, 0, 0, 0, 5, "Shaman", "uncategorized", false}, --Riptide r1
-	[61299] = {0, nil, 0, 0, 0, 5, "Shaman", "uncategorized", false}, --Riptide r2
-	[61300] = {0, nil, 0, 0, 0, 5, "Shaman", "uncategorized", false}, --Riptide r3
-	[61301] = {0, nil, 0, 0, 0, 5, "Shaman", "uncategorized", false}, --Riptide r4
-	[51886] = {0, nil, 0, 0, 0, 5, "Shaman", "uncategorized", false}, --Cleanse Spirit
-	--cleanse spirit
-	
+
 	---Mage
-	--Total: 18
 	--Freeze triggers no combatlog event
 	--Arcane
-	[12042] = {85, nil, 85, 85, 85, 3, "Mage", "nuke", false}, --Arcane Power
+	[12042] = {180, nil, 180, 180, 180, 3, "Mage", "nuke", false}, --Arcane Power
 	[1953] = {15, nil, 15, 15, 15, 0, "Mage", "gapcloser", false}, --Blink
 	[2139] = {24, nil, 24, 24, 24, 0, "Mage", "silence", false}, --Counterspell
-	[12051] = {120, nil, 120, 240, 240, 0, "Mage", "defensive", false}, --Evocation
-	[66] = {126, nil, 126, 180, 180, 0, "Mage", "defensive", false}, --Invisibility
-	[55342] = {180, nil, 180, 180, 180, 0, "Mage", "nuke", false}, --Mirror Image
-	[12043] = {85, nil, 85, 120, 120, 3, "Mage", "nuke", false}, --Presence of Mind
+	[12051] = {480, nil, 480, 480, 480, 0, "Mage", "defensive", false}, --Evocation
+	[66] = {300, nil, 300, 300, 300, 0, "Mage", "defensive", false}, --Invisibility
+	[12043] = {180, nil, 180, 180, 180, 3, "Mage", "nuke", false}, --Presence of Mind
 	[5405] = {120, nil, 120, 120, 120, 0, "Mage", "uncategorized", false}, --Mana Gem r1
 	[10052] = {120, nil, 120, 120, 120, 0, "Mage", "uncategorized", false}, --Mana Gem r2
 	[10057] = {120, nil, 120, 120, 120, 0, "Mage", "uncategorized", false}, --Mana Gem r3
 	[10058] = {120, nil, 120, 120, 120, 0, "Mage", "uncategorized", false}, --Mana Gem r4
 	[27103] = {120, nil, 120, 120, 120, 0, "Mage", "uncategorized", false}, --Mana Gem r5
-	[42987] = {120, nil, 120, 120, 120, 0, "Mage", "uncategorized", false}, --Mana Gem r6
-	--for detection:
-	[44425] = {0, nil, 0, 0, 0, 3, "Mage", "", false}, --Arcane Barrage r1
-	[44780] = {0, nil, 0, 0, 0, 3, "Mage", "", false}, --Arcane Barrage r2
-	[44781] = {0, nil, 0, 0, 0, 3, "Mage", "", false}, --Arcane Barrage r3
+	--detection:
 	[31589] = {0, nil, 0, 0, 0, 3, "Mage", "", false}, --Slow
 	--Fire
 	[11113] = {30, nil, 30, 30, 30, 4, "Mage", "uncategorized", false}, --Blast Wave r1
@@ -409,74 +376,67 @@ Rect.spells = {
 	[13021] = {30, nil, 30, 30, 30, 4, "Mage", "uncategorized", false}, --Blast Wave r5
 	[27133] = {30, nil, 30, 30, 30, 4, "Mage", "uncategorized", false}, --Blast Wave r6
 	[33933] = {30, nil, 30, 30, 30, 4, "Mage", "uncategorized", false}, --Blast Wave r7
-	[42944] = {30, nil, 30, 30, 30, 4, "Mage", "uncategorized", false}, --Blast Wave r8
-	[42945] = {30, nil, 30, 30, 30, 4, "Mage", "uncategorized", false}, --Blast Wave r9
-	[28682] = {120, nil, 120, 120, 120, 4, "Mage", "nuke", false}, --Combustion
+	[28682] = {180, nil, 180, 180, 180, 4, "Mage", "nuke", false}, --Combustion
 	[31661] = {20, nil, 30, 30, 30, 4, "Mage", "cc", false}, --Dragon's Breath r1
 	[33041] = {20, nil, 30, 30, 30, 4, "Mage", "cc", false}, --Dragon's Breath r2
 	[33042] = {20, nil, 30, 30, 30, 4, "Mage", "cc", false}, --Dragon's Breath r3
 	[33043] = {20, nil, 30, 30, 30, 4, "Mage", "cc", false}, --Dragon's Breath r4
-	[42949] = {20, nil, 30, 30, 30, 4, "Mage", "cc", false}, --Dragon's Breath r5
-	[42950] = {20, nil, 30, 30, 30, 4, "Mage", "cc", false}, --Dragon's Breath r6
 	[543] = {30, nil, 30, 30, 30, 0, "Mage", "shield", false}, --Fire Ward r1
 	[8457] = {30, nil, 30, 30, 30, 0, "Mage", "shield", false}, --Fire Ward r2
 	[8458] = {30, nil, 30, 30, 30, 0, "Mage", "shield", false}, --Fire Ward r3
 	[10223] = {30, nil, 30, 30, 30, 0, "Mage", "shield", false}, --Fire Ward r4
 	[10225] = {30, nil, 30, 30, 30, 0, "Mage", "shield", false}, --Fire Ward r5
 	[27128] = {30, nil, 30, 30, 30, 0, "Mage", "shield", false}, --Fire Ward r6
-	[43010] = {30, nil, 30, 30, 30, 0, "Mage", "shield", false}, --Fire Ward r7
+
 	--Frost
 	[11958] = {384, 
-		{44572, 122, 865, 6131, 10230, 27088, 42917, 6143, 8461, 8462,
-		10177, 28609, 32796, 43012, 11426, 13031, 13032, 13033,
-		27134, 33405, 43038, 43039, 45438, 12472, 31687}, 480, 480, 384, 5, "Mage", "cdreset", false}, --Cold Snap
-	[44572] = {30, nil, 30, 30, 30, 5, "Mage", "stun", false}, --Deep Freeze
-	[122] = {20, nil, 20, 20, 20, 0, "Mage", "cc", false}, --Frost Nova r1
-	[865] = {20, nil, 20, 20, 20, 0, "Mage", "cc", false}, --Frost Nova r2
-	[6131] = {20, nil, 20, 20, 20, 0, "Mage", "cc", false}, --Frost Nova r3
-	[10230] = {20, nil, 20, 20, 20, 0, "Mage", "cc", false}, --Frost Nova r4
-	[27088] = {20, nil, 20, 20, 20, 0, "Mage", "cc", false}, --Frost Nova r5
-	[42917] = {20, nil, 20, 20, 20, 0, "Mage", "cc", false}, --Frost Nova r6
+		{
+			122, 865, 6131, 10230, 27088, --Frost Nova
+			543, 8457, 8458, 10223, 10225, 27128, --Fire Ward
+			6143, 8461, 8462, 10177, 28609, 32796, --Frost Ward
+			11426, 13031, 13032, 13033, 27134, 33405, --Ice Barrier
+			45438, --Ice Block
+			12472, --Icy Veins
+			31687 --Summon Water Elemental
+		}, 384, 384, 384, 5, "Mage", "cdreset", false}, --Cold Snap
+
+	[122] = {21, nil, 21, 21, 21, 0, "Mage", "cc", false}, --Frost Nova r1
+	[865] = {21, nil, 21, 21, 21, 0, "Mage", "cc", false}, --Frost Nova r2
+	[6131] = {21, nil, 21, 21, 21, 0, "Mage", "cc", false}, --Frost Nova r3
+	[10230] = {21, nil, 21, 21, 21, 0, "Mage", "cc", false}, --Frost Nova r4
+	[27088] = {21, nil, 21, 21, 21, 0, "Mage", "cc", false}, --Frost Nova r5
 	[6143] = {30, nil, 30, 30, 30, 0, "Mage", "shield", false}, --Frost Ward r1
 	[8461] = {30, nil, 30, 30, 30, 0, "Mage", "shield", false}, --Frost Ward r2
 	[8462] = {30, nil, 30, 30, 30, 0, "Mage", "shield", false}, --Frost Ward r3
 	[10177] = {30, nil, 30, 30, 30, 0, "Mage", "shield", false}, --Frost Ward r4
 	[28609] = {30, nil, 30, 30, 30, 0, "Mage", "shield", false}, --Frost Ward r5
 	[32796] = {30, nil, 30, 30, 30, 0, "Mage", "shield", false}, --Frost Ward r6
-	[43012] = {30, nil, 30, 30, 30, 0, "Mage", "shield", false}, --Frost Ward r7
 	[11426] = {24, nil, 24, 24, 24, 5, "Mage", "shield", false}, --Ice Barrier r1
 	[13031] = {24, nil, 24, 24, 24, 5, "Mage", "shield", false}, --Ice Barrier r2
 	[13032] = {24, nil, 24, 24, 24, 5, "Mage", "shield", false}, --Ice Barrier r3
 	[13033] = {24, nil, 24, 24, 24, 5, "Mage", "shield", false}, --Ice Barrier r4
 	[27134] = {24, nil, 24, 24, 24, 5, "Mage", "shield", false}, --Ice Barrier r5
 	[33405] = {24, nil, 24, 24, 24, 5, "Mage", "shield", false}, --Ice Barrier r6
-	[43038] = {24, nil, 24, 24, 24, 5, "Mage", "shield", false}, --Ice Barrier r7
-	[43039] = {24, nil, 24, 24, 24, 5, "Mage", "shield", false}, --Ice Barrier r8
-	[45438] = {240, nil, 240, 240, 240, 0, "Mage", "anticc", false}, --Ice Block
-	[12472] = {144, nil, 144, 144, 144, 0, "Mage", "nuke", false}, --Icy Veins
-	[31687] = {144, nil, 144, 144, 144, 5, "Mage", "nuke", false}, --Summon Water Elemental
+	[45438] = {240, nil, 300, 300, 240, 0, "Mage", "anticc", false}, --Ice Block
+	[12472] = {180, nil, 180, 180, 180, 0, "Mage", "nuke", false}, --Icy Veins
+	[31687] = {300, nil, 300, 300, 300, 5, "Mage", "nuke", false}, --Summon Water Elemental
 	
 	--Warlock
-	--Total 10 (12 with pets)
+	--Pets
+	[19647] = {24, nil, 0, 0, 0, 0, "Warlock", "silence", true}, --Spell Lock
+	[47986] = {60, nil, 0, 0, 0, 0, "Warlock", "defensive", true}, --Sacrifice
 	--Affliction
 	[6789] = {120, nil, 120, 120, 120, 0, "Warlock", "cc", false}, --Death Coil r1
 	[17925] = {120, nil, 120, 120, 120, 0, "Warlock", "cc", false}, --Death Coil r2
 	[17962] = {120, nil, 120, 120, 120, 0, "Warlock", "cc", false}, --Death Coil r3
 	[27223] = {120, nil, 120, 120, 120, 0, "Warlock", "cc", false}, --Death Coil r4
-	[47859] = {120, nil, 120, 120, 120, 0, "Warlock", "cc", false}, --Death Coil r5
-	[47860] = {120, nil, 120, 120, 120, 0, "Warlock", "cc", false}, --Death Coil r6
 	[5484] = {40, nil, 40, 40, 40, 0, "Warlock", "cc", false}, --Howl of Terror r1
 	[17928] = {40, nil, 40, 40, 40, 0, "Warlock", "cc", false}, --Howl of Terror r2
+	[18288] = {180, nil, 180, 180, 180, 0, "Warlock", "nuke", false}, --Amplify Curse
 	--Detection
 	[30108] = {0, nil, 0, 0, 0, 3, "Warlock", "uncategorized", false}, --Unstable Affliction r1
 	[30404] = {0, nil, 0, 0, 0, 3, "Warlock", "uncategorized", false}, --Unstable Affliction r2
 	[30405] = {0, nil, 0, 0, 0, 3, "Warlock", "uncategorized", false}, --Unstable Affliction r3
-	[47841] = {0, nil, 0, 0, 0, 3, "Warlock", "uncategorized", false}, --Unstable Affliction r4
-	[47843] = {0, nil, 0, 0, 0, 3, "Warlock", "uncategorized", false}, --Unstable Affliction r5
-	[48181] = {0, nil, 0, 0, 0, 3, "Warlock", "uncategorized", false}, --Haunt r1
-	[59161] = {0, nil, 0, 0, 0, 3, "Warlock", "uncategorized", false}, --Haunt r2
-	[59163] = {0, nil, 0, 0, 0, 3, "Warlock", "uncategorized", false}, --Haunt r3
-	[59164] = {0, nil, 0, 0, 0, 3, "Warlock", "uncategorized", false}, --Haunt r4
 	[18223] = {0, nil, 0, 0, 0, 3, "Warlock", "uncategorized", false}, --Curse of Exhaustion
 	--Demonology
 	[23469] = {120, nil, 120, 120, 120, 0, "", "defensive", false}, --Healthstone r1
@@ -485,41 +445,21 @@ Rect.spells = {
 	[23475] = {120, nil, 120, 120, 120, 0, "", "defensive", false}, --Healthstone r4
 	[23477] = {120, nil, 120, 120, 120, 0, "", "defensive", false}, --Healthstone r5
 	[27237] = {120, nil, 120, 120, 120, 0, "", "defensive", false}, --Healthstone r6
-	[47872] = {120, nil, 120, 120, 120, 0, "", "defensive", false}, --Healthstone r7
-	[47877] = {120, nil, 120, 120, 120, 0, "", "defensive", false}, --Healthstone r8
-	[54785] = {45, nil, 45, 45, 45, 4, "Warlock", "stun", false}, --Demon Charge
-	[48020] = {30, nil, 30, 30, 30, 0, "Warlock", "gapcloser", false}, --Demonic Circle: Teleport
-	[47193] = {42, nil, 42, 42, 42, 4, "Warlock", "nuke", false}, --Demonic Empowerment
-	[18708] = {126, nil, 180, 126, 180, 0, "Warlock", "nuke", false}, --Fel Domination
-	[50589] = {30, nil, 30, 30, 30, 4, "Warlock", "nuke", false}, --Immolation Aura
-	[47241] = {130, nil, 130, 130, 130, 4, "Warlock", "nuke", false}, --Metamorphosis
+	[18708] = {900, nil, 900, 900, 900, 0, "Warlock", "defensive", false}, --Fel Domination
 	[6229] = {30, nil, 30, 30, 30, 0, "Warlock", "shield", false}, --Shadow Ward r1
 	[11739] = {30, nil, 30, 30, 30, 0, "Warlock", "shield", false}, --Shadow Ward r2
 	[11740] = {30, nil, 30, 30, 30, 0, "Warlock", "shield", false}, --Shadow Ward r3
 	[28610] = {30, nil, 30, 30, 30, 0, "Warlock", "shield", false}, --Shadow Ward r4
-	[47890] = {30, nil, 30, 30, 30, 0, "Warlock", "shield", false}, --Shadow Ward r5
-	[47891] = {30, nil, 30, 30, 30, 0, "Warlock", "shield", false}, --Shadow Ward r6
-	--Detection
-	[47193] = {0, nil, 0, 0, 0, 0, "Warlock", "uncategorized", false}, --Demonic Empowerment
 	--Destruction
 	[30283] = {20, nil, 20, 20, 20, 5, "Warlock", "stun", false}, --Shadowfury r1
 	[30413] = {20, nil, 20, 20, 20, 5, "Warlock", "stun", false}, --Shadowfury r2
 	[30414] = {20, nil, 20, 20, 20, 5, "Warlock", "stun", false}, --Shadowfury r3
-	[47846] = {20, nil, 20, 20, 20, 5, "Warlock", "stun", false}, --Shadowfury r4
-	[47847] = {20, nil, 20, 20, 20, 5, "Warlock", "stun", false}, --Shadowfury r5
-	--Detection
-	[17962] = {0, nil, 0, 0, 0, 5, "Warlock", "", false}, --Conflagrate
-	--Pets
-	[19647] = {24, nil, 0, 0, 0, 0, "Warlock", "silence", true}, --Spell Lock
-	[47986] = {60, nil, 0, 0, 0, 0, "Warlock", "defensive", true}, --Sacrifice
-	
+
 	--Druid
-	--Total: 18
-	--Typhoon only triggers combat log event, when it hits something
 	--Balance
 	[22812] = {60, nil, 60, 60, 60, 0, "Druid", "defensive", false}, --Barkskin
 	[33831] = {180, nil, 180, 180, 180, 3, "Druid", "nuke", false}, --Force of Nature
-	[29166] = {180, nil, 180, 180, 180, 0, "Druid", "defensive", false}, --Innervate
+	[29166] = {360, nil, 360, 360, 360, 0, "Druid", "defensive", false}, --Innervate
 	[16689] = {60, nil, 60, 60, 60, 0, "Druid", "cc", false}, --Nature's Grasp r1
 	[16810] = {60, nil, 60, 60, 60, 0, "Druid", "cc", false}, --Nature's Grasp r2
 	[16811] = {60, nil, 60, 60, 60, 0, "Druid", "cc", false}, --Nature's Grasp r3
@@ -527,62 +467,22 @@ Rect.spells = {
 	[16813] = {60, nil, 60, 60, 60, 0, "Druid", "cc", false}, --Nature's Grasp r5
 	[17329] = {60, nil, 60, 60, 60, 0, "Druid", "cc", false}, --Nature's Grasp r6
 	[27009] = {60, nil, 60, 60, 60, 0, "Druid", "cc", false}, --Nature's Grasp r7
-	[53312] = {60, nil, 60, 60, 60, 0, "Druid", "cc", false}, --Nature's Grasp r8
-	[48505] = {90, nil, 90, 90, 90, 3, "Druid", "nuke", false}, --Starfall r1
-	[53199] = {90, nil, 90, 90, 90, 3, "Druid", "nuke", false}, --Starfall r2
-	[53200] = {90, nil, 90, 90, 90, 3, "Druid", "nuke", false}, --Starfall r3
-	[53201] = {90, nil, 90, 90, 90, 3, "Druid", "nuke", false}, --Starfall r4
-	[61391] = {20, nil, 20, 20, 20, 3, "Druid", "gapcloser", false}, --Typhoon r1
-	[61390] = {20, nil, 20, 20, 20, 3, "Druid", "gapcloser", false}, --Typhoon r2
-	[61388] = {20, nil, 20, 20, 20, 3, "Druid", "gapcloser", false}, --Typhoon r3
-	[61387] = {20, nil, 20, 20, 20, 3, "Druid", "gapcloser", false}, --Typhoon r4
-	[53227] = {20, nil, 20, 20, 20, 3, "Druid", "gapcloser", false}, --Typhoon r5
 	--Feral
-	[5211] = {30, nil, 60, 30, 60, 0, "Druid", "stun", false}, --Bash r1
-	[6798] = {30, nil, 60, 30, 60, 0, "Druid", "stun", false}, --Bash r2
-	[8983] = {30, nil, 60, 30, 60, 0, "Druid", "stun", false}, --Bash r3
-	[50334] = {180, nil, 180, 180, 180, 4, "Druid", "nuke", false}, --Berserk
-	[1850] = {144, nil, 144, 144, 144, 0, "Druid", "defensive", false}, --Dash r1
-	[9821] = {144, nil, 144, 144, 144, 0, "Druid", "defensive", false}, --Dash r2
-	[33357] = {144, nil, 144, 144, 144, 0, "Druid", "defensive", false}, --Dash r3
+	[5211] = {60, nil, 60, 60, 60, 0, "Druid", "stun", false}, --Bash r1
+	[6798] = {60, nil, 60, 60, 60, 0, "Druid", "stun", false}, --Bash r2
+	[8983] = {60, nil, 60, 60, 60, 0, "Druid", "stun", false}, --Bash r3
+	[1850] = {300, nil, 300, 300, 300, 0, "Druid", "defensive", false}, --Dash r1
+	[9821] = {300, nil, 300, 300, 300, 0, "Druid", "defensive", false}, --Dash r2
+	[33357] = {300, nil, 300, 300, 300, 0, "Druid", "defensive", false}, --Dash r3
 	[5229] = {60, nil, 60, 60, 60, 0, "Druid", "uncategorized", false}, --Enrage
 	[16979] = {15, nil, 15, 15, 15, 0, "Druid", "silence", false}, --Feral Charge - Bear
-	[49376] = {30, nil, 30, 30, 30, 0, "Druid", "gapcloser", false}, --Feral Charge - Cat
 	[22842] = {180, nil, 180, 180, 180, 0, "Druid", "defensive", false}, --Frenzied Regeneration
-	[22570] = {10, nil, 10, 10, 10, 0, "Druid", "stun", false}, --Maim r1
-	[49802] = {10, nil, 10, 10, 10, 0, "Druid", "stun", false}, --Maim r2
-	[61336] = {180, nil, 180, 180, 180, 0, "Druid", "defensive", false}, --Survival Instinct
-	[5217] = {30, nil, 30, 30, 30, 0, "Druid", "uncategorized", false}, --Tiger's Fury r1
-	[6793] = {30, nil, 30, 30, 30, 0, "Druid", "uncategorized", false}, --Tiger's Fury r2
-	[9845] = {30, nil, 30, 30, 30, 0, "Druid", "uncategorized", false}, --Tiger's Fury r3
-	[9856] = {30, nil, 30, 30, 30, 0, "Druid", "uncategorized", false}, --Tiger's Fury r4
-	[50212] = {30, nil, 30, 30, 30, 0, "Druid", "uncategorized", false}, --Tiger's Fury r5
-	[50213] = {30, nil, 30, 30, 30, 0, "Druid", "uncategorized", false}, --Tiger's Fury r6
-	--Detection
-	[33876] = {0, nil, 0, 0, 0, 4, "Druid", "uncategorized", false}, --Mangle (Cat) r1
-	[33982] = {0, nil, 0, 0, 0, 4, "Druid", "uncategorized", false}, --Mangle (Cat) r2
-	[33983] = {0, nil, 0, 0, 0, 4, "Druid", "uncategorized", false}, --Mangle (Cat) r3
-	[48565] = {0, nil, 0, 0, 0, 4, "Druid", "uncategorized", false}, --Mangle (Cat) r4
-	[48566] = {0, nil, 0, 0, 0, 4, "Druid", "uncategorized", false}, --Mangle (Cat) r5
-	[33878] = {0, nil, 0, 0, 0, 4, "Druid", "uncategorized", false}, --Mangle (Bear) r1
-	[33986] = {0, nil, 0, 0, 0, 4, "Druid", "uncategorized", false}, --Mangle (Bear) r2
-	[33987] = {0, nil, 0, 0, 0, 4, "Druid", "uncategorized", false}, --Mangle (Bear) r3
-	[48563] = {0, nil, 0, 0, 0, 4, "Druid", "uncategorized", false}, --Mangle (Bear) r4
-	[48564] = {0, nil, 0, 0, 0, 4, "Druid", "uncategorized", false}, --Mangle (Bear) r5
 	--Restoration
 	[17116] = {180, nil, 180, 180, 180, 5, "Druid", "defensive", false}, --Nature's Swiftness
 	[18562] = {15, nil, 15, 15, 15, 5, "Druid", "defensive", false}, --Swiftmend
-	[740] = {192, nil, 480, 480, 192, 0, "Druid", "defensive", false}, --Tranquility r1
-	[8918] = {192, nil, 480, 480, 192, 0, "Druid", "defensive", false}, --Tranquility r2
-	[9862] = {192, nil, 480, 480, 192, 0, "Druid", "defensive", false}, --Tranquility r3
-	[9863] = {192, nil, 480, 480, 192, 0, "Druid", "defensive", false}, --Tranquility r4
-	[26983] = {192, nil, 480, 480, 192, 0, "Druid", "defensive", false}, --Tranquility r5
-	[48446] = {192, nil, 480, 480, 192, 0, "Druid", "defensive", false}, --Tranquility r6
-	[48447] = {192, nil, 480, 480, 192, 0, "Druid", "defensive", false}, --Tranquility r7
-	--Detection
-	[48438] = {0, nil, 0, 0, 0, 5, "Druid", "uncategorized", false}, --Wild Growth r1
-	[53248] = {0, nil, 0, 0, 0, 5, "Druid", "uncategorized", false}, --Wild Growth r2
-	[53249] = {0, nil, 0, 0, 0, 5, "Druid", "uncategorized", false}, --Wild Growth r3
-	[53251] = {0, nil, 0, 0, 0, 5, "Druid", "uncategorized", false}, --Wild Growth r4
-	[33891] = {0, nil, 0, 0, 0, 5, "Druid", "uncategorized", false}, --Tree of Life
+	[740] = {600, nil, 480, 480, 600, 0, "Druid", "defensive", false}, --Tranquility r1
+	[8918] = {600, nil, 600, 480, 600, 0, "Druid", "defensive", false}, --Tranquility r2
+	[9862] = {600, nil, 600, 480, 600, 0, "Druid", "defensive", false}, --Tranquility r3
+	[9863] = {600, nil, 600, 480, 600, 0, "Druid", "defensive", false}, --Tranquility r4
+	[26983] = {600, nil, 600, 480, 600, 0, "Druid", "defensive", false}, --Tranquility r5
 }
