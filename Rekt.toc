@@ -16,4 +16,6 @@ data\options.lua
 data\sorters.lua
 data\drs.lua
 data\cooldowns.lua
+data\interruptbar.lua
+data\warn.lua
 Rekt.lua
