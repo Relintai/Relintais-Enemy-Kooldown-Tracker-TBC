@@ -185,22 +185,22 @@ Rekt.spells = {
 		, false, false}, 180, 180, 180, 5, "Hunter", "cdreset", false, false, false}, --Readiness
 
 	[19263] = {300, nil, 300, 300, 300, 0, "Hunter", "defensive", false, false, true}, --Deterrence
-	[13813] = {24, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false, false, false}, --Explosive Trap r1
-	[14316] = {24, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false, false, false}, --Explosive Trap r2
-	[14317] = {24, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false, false, false}, --Explosive Trap r3
-	[27025] = {24, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false, false, false}, --Explosive Trap r4
+	[13813] = {30, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false, false, false}, --Explosive Trap r1
+	[14316] = {30, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false, false, false}, --Explosive Trap r2
+	[14317] = {30, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false, false, false}, --Explosive Trap r3
+	[27025] = {30, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false, false, false}, --Explosive Trap r4
 	--Feign Death
-	[1499] = {24, nil, 30, 30, 24, 0, "Hunter", "cc", false, false, false}, --Freezing Trap r1
-	[14310] = {24, nil, 30, 30, 24, 0, "Hunter", "cc", false, false, false}, --Freezing Trap r2
-	[14311] = {24, nil, 30, 30, 24, 0, "Hunter", "cc", false, false, false}, --Freezing Trap r3
-	[13809] = {24, nil, 30, 30, 24, 0, "Hunter", "cc", false, false, false}, --Frost Trap
-	[13795] = {24, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false, false, false}, --Immolation Trap r1
-	[14302] = {24, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false, false, false}, --Immolation Trap r2
-	[14303] = {24, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false, false, false}, --Immolation Trap r3
-	[14304] = {24, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false, false, false}, --Immolation Trap r4
-	[14305] = {24, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false, false, false}, --Immolation Trap r5
-	[27023] = {24, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false, false, false}, --Immolation Trap r6
-	[34600] = {24, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false, false, false}, --Snake Trap
+	[1499] = {30, nil, 30, 30, 24, 0, "Hunter", "cc", false, false, false}, --Freezing Trap r1
+	[14310] = {30, nil, 30, 30, 24, 0, "Hunter", "cc", false, false, false}, --Freezing Trap r2
+	[14311] = {30, nil, 30, 30, 24, 0, "Hunter", "cc", false, false, false}, --Freezing Trap r3
+	[13809] = {30, nil, 30, 30, 24, 0, "Hunter", "cc", false, false, false}, --Frost Trap
+	[13795] = {30, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false, false, false}, --Immolation Trap r1
+	[14302] = {30, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false, false, false}, --Immolation Trap r2
+	[14303] = {30, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false, false, false}, --Immolation Trap r3
+	[14304] = {30, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false, false, false}, --Immolation Trap r4
+	[14305] = {30, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false, false, false}, --Immolation Trap r5
+	[27023] = {30, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false, false, false}, --Immolation Trap r6
+	[34600] = {30, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false, false, false}, --Snake Trap
 	[19386] = {60, nil, 60, 60, 60, 5, "Hunter", "cc", false, false, false}, --Wyvern Sting r1
 	[24132] = {60, nil, 60, 60, 60, 5, "Hunter", "cc", false, false, false}, --Wyvern Sting r2
 	[24133] = {60, nil, 60, 60, 60, 5, "Hunter", "cc", false, false, false}, --Wyvern Sting r3
