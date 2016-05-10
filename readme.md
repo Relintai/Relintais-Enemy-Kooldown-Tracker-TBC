@@ -4,7 +4,6 @@ This is a PvP addon for **World of Warcraft - The Burning Crusade (2.4.3)**
 
 # Screenshot
 
-
 ![Relintai's Enemy "Kooldown" Tracker](https://cloud.githubusercontent.com/assets/16229538/15148105/05fc26d8-16c4-11e6-8606-b5a9e8fb3075.png)
 
 # Main Features
