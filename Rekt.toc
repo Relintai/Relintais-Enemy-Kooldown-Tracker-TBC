@@ -1,4 +1,4 @@
-## Interface: 30300
+## Interface: 20400
 ## Author: Relintai
 ## Name: Rekt
 ## Title: Rekt
@@ -6,7 +6,7 @@
 ## DefaultState: Enabled
 ## OptionalDeps: Ace3
 ## SavedVariables: RektDB
-## Version: 1.01
+## Version: 1.05
 
 embeds.xml
 data\global.lua
