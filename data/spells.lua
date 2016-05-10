@@ -182,7 +182,7 @@ Rekt.spells = {
 			13795, 14302, 14303, 14304, 14305, 27023, --Immolation Trap
 			34600, --Snake Trap
 			19386, 24132, 24133, 27068 --Wyvern Sting
-		, false, false}, 180, 180, 180, 5, "Hunter", "cdreset", false, false, false}, --Readiness
+		}, 180, 180, 180, 5, "Hunter", "cdreset", false, false, false}, --Readiness
 
 	[19263] = {300, nil, 300, 300, 300, 0, "Hunter", "defensive", false, false, true}, --Deterrence
 	[13813] = {30, nil, 30, 30, 24, 0, "Hunter", "uncategorized", false, false, false}, --Explosive Trap r1
@@ -240,7 +240,7 @@ Rekt.spells = {
 			1856, 1857, 26889, --Vanish
 			14177, --Cold Blood
 			36554 --Shadowstep
-		, false, false}, 600, 600, 600, 0, "Rogue", "cdreset", false, false, true}, --Preparation
+		}, 600, 600, 600, 0, "Rogue", "cdreset", false, false, true}, --Preparation
 
 	[36554] = {20, nil, 30, 30, 20, 5, "Rogue", "gapcloser", false, false, false}, --Shadowstep
 	[1856] = {210, nil, 300, 300, 210, 0, "Rogue", "defensive", false, false, false}, --Vanish r1
@@ -400,7 +400,7 @@ Rekt.spells = {
 			45438, --Ice Block
 			12472, --Icy Veins
 			31687 --Summon Water Elemental
-		, false, false}, 384, 384, 384, 5, "Mage", "cdreset", false, false, false}, --Cold Snap
+		}, 384, 384, 384, 5, "Mage", "cdreset", false, false, false}, --Cold Snap
 
 	[122] = {21, nil, 21, 21, 21, 0, "Mage", "cc", false, false, false}, --Frost Nova r1
 	[865] = {21, nil, 21, 21, 21, 0, "Mage", "cc", false, false, false}, --Frost Nova r2
