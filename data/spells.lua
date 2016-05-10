@@ -1,5 +1,5 @@
 
--- [42292] ={120, nil,   120,     120,     120,     0,    "", "anticc", false, false, false, false, false}, --PvP Trinket
+-- [42292] ={120, nil,   120,     120,     120,     0,    "", "anticc", false, false, false}, --PvP Trinket
 -- spellid   cd  reset spec1cd, spec2cd, spec3cd, spec, class,  type, ispetspell interrupt warn --comment
 
 --!IMPORTANT type, has to match one from the list below, nor can it be empty, you will get Lua errors from Sorters!
