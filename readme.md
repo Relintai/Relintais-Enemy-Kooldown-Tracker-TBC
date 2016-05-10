@@ -2,11 +2,28 @@
 
 This is a PvP addon for **World of Warcraft - The Burning Crusade (2.4.3)**
 
+# Screenshot
+
+
+![Relintai's Enemy "Kooldown" Tracker](https://cloud.githubusercontent.com/assets/16229538/15148105/05fc26d8-16c4-11e6-8606-b5a9e8fb3075.png)
+
 # Main Features
 
 ## Cooldowns
 
 Shows your target's, and your focus's cooldowns, as **cooldown icons**.
+
+### Cooldown Types
+
+The addon can show a backgorund under the cooldowns, it can group them based on these groups, 
+visually separating them, based on the type of the cd.
+You can also customize the colors.
+(See the colorful border around the cooldowns on the screenshot)
+
+### Type Based Sorting
+
+The cooldowns are separated into types, you can set which wype will be displayed first, 
+you can also set the sorting inside type groups.
 
 ### Spec Detection
 
@@ -36,4 +53,4 @@ Practicly your combatlog stops processing any new events, a fix is implemented t
 
 For the addon's settings go to Interface->Switch ot the addons tab->Rekt
 or
-type /rect into the chat
+type /rekt into the chat
