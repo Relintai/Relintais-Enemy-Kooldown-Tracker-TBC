@@ -54,6 +54,6 @@ For the addon's settings go to Interface->Switch ot the addons tab->Rekt
 or
 type /rekt into the chat
 
-# Third Party Modlues
+# Third Party Modules
 
 Includes a modified version of TrinketTracker by Mikhail "miraage" Osher (miraage.wow@gmail.com).
