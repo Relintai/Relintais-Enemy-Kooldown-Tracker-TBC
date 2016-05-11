@@ -421,7 +421,7 @@ Rekt.spells = {
 	[33405] = {24, nil, 24, 24, 24, 5, "Mage", "shield", false, false, false}, --Ice Barrier r6
 	[45438] = {240, nil, 300, 300, 240, 0, "Mage", "anticc", false, false, false}, --Ice Block
 	[12472] = {180, nil, 180, 180, 180, 0, "Mage", "nuke", false, false, false}, --Icy Veins
-	[31687] = {300, nil, 300, 300, 300, 5, "Mage", "nuke", false, false, false}, --Summon Water Elemental
+	[31687] = {180, nil, 180, 180, 180, 5, "Mage", "nuke", false, false, false}, --Summon Water Elemental
 	
 	--Warlock
 	--Pets
