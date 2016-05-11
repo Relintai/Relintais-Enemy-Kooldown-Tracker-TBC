@@ -53,3 +53,7 @@ Practicly your combatlog stops processing any new events, a fix is implemented t
 For the addon's settings go to Interface->Switch ot the addons tab->Rekt
 or
 type /rekt into the chat
+
+# Third Party Modlues
+
+Includes a modified version of TrinketTracker by Mikhail "miraage" Osher (miraage.wow@gmail.com).

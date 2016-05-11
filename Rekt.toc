@@ -19,3 +19,5 @@ data\cooldowns.lua
 data\interruptbar.lua
 data\warn.lua
 Rekt.lua
+
+ThirdPartyModules\TrinketTracker\TrinketTracker.lua
