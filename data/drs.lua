@@ -428,3 +428,21 @@ function Rekt:HideSelfDRFrames()
 		frame:Hide();
 	end
 end
+
+-- Debug Stuff: 
+
+function Rekt:printAllDRsForGUID(guid)
+	local drs = Rekt.drs[dstGUID];
+
+	for k, v in pairs(drs) do
+		self:Print(k .. " " .. v);
+
+		for ki, kvi in pairs(v) do
+			self:Print("  " .. ki .. " " .. kvi);
+
+			for kj, kvj in pairs(kv) do
+				self:Print("      " .. kj .. " " .. kvj);
+			end
+		end
+	end
+end

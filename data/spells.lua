@@ -242,7 +242,7 @@ Rekt.spells = {
 			36554 --Shadowstep
 		}, 600, 600, 600, 0, "Rogue", "cdreset", false, false, true}, --Preparation
 
-	[36554] = {20, nil, 30, 30, 20, 5, "Rogue", "gapcloser", false, false, false}, --Shadowstep
+	[36554] = {30, nil, 30, 30, 30, 5, "Rogue", "gapcloser", false, false, false}, --Shadowstep
 	[1856] = {210, nil, 300, 300, 210, 0, "Rogue", "defensive", false, false, false}, --Vanish r1
 	[1857] = {210, nil, 300, 300, 210, 0, "Rogue", "defensive", false, false, false}, --Vanish r2
 	[26889] = {210, nil, 300, 300, 210, 0, "Rogue", "defensive", false, false, false}, --Vanish r3
