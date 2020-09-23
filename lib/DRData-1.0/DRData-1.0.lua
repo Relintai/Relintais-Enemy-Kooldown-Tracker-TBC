@@ -94,6 +94,11 @@ Data.spells = {
 	
 	-- Gouge
 	[1776] = "disorient",
+	[1777] = "disorient",
+	[8629] = "disorient",
+	[11285] = "disorient",
+	[11286] = "disorient",
+	[38764] = "disorient",
 		
 	-- Hex (Guessing)
 	[51514] = "disorient",
